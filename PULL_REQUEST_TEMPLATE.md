@@ -11,7 +11,7 @@ The title of your PR should be [CHAIN] Add NAME (SYMBOL) or Update NAME (SYMBOL)
 
 Icons requirements:
 - [ ] Icons must be of type `SVG` or `PNG`.
-- [ ] Max file size is 2KB.
+- [ ] Max file size is 100KB.
 - [ ] Icon must be a square, i.e, width and height of icon must be the same.
 - [ ] Minimum length of icon must be 100px and maximum length of icon must be 500px.
 

@@ -4,13 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "node validateImages.js",
     "prepare": "husky install",
-    "pre-commit": "node hooks/validateImages.js"
+    "precommit": "npm run test"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run pre-commit"
+      "pre-commit": "npm run precommit"
     }
   },
   "author": "",

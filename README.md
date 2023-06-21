@@ -3,7 +3,6 @@ This repository allows frontend to fetch token icons. Token icons are named afte
 Tokens are stored under `tokenIcons` directory
 
 Icons requirements:
-1. Icons must be of type `SVG` or `PNG`.
+1. Icons must be of type `SVG`.
 2. Max file size is 2KB.
 3. Icon must be a square, i.e, width and height of icon must be the same.
-4. Minimum length of icon must be 100px and maximum length of icon must be 500px.
