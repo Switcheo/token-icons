@@ -1,8 +1,8 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<circle cx="12" cy="12" r="12" fill="url(#paint0_linear_rune)"/>
-<path d="M5 20L16.1697 15.2964L12.6337 11.7108L5 20ZM9.10327 8.13081L12.6392 11.7108L18.9511 4L9.10327 8.13081Z" fill="white"/>
+<path d="M12 24C18.6259 24 24 18.6259 24 12C24 5.37406 18.6259 0 12 0C5.37406 0 0 5.37406 0 12C0.00476002 18.6259 5.37406 24 12 24Z" fill="black"/>
+<path d="M5.75009 18.9258L15.6271 14.8036L12.4998 11.662L5.75009 18.9258ZM9.37722 8.52519L12.5046 11.662L18.0881 4.90282L9.37722 8.52519Z" fill="url(#paint0_linear_2_200_rune)"/>
 <defs>
-<linearGradient id="paint0_linear_rune" x1="0.000417276" y1="12.0003" x2="23.9966" y2="12.0003" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint0_linear_2_200_rune" x1="5.74855" y1="11.9148" x2="18.0851" y2="11.9148" gradientUnits="userSpaceOnUse">
 <stop stop-color="#00CCFF"/>
 <stop offset="1" stop-color="#33FF99"/>
 </linearGradient>
