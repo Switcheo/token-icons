@@ -1,0 +1,48 @@
+name: Sync Folders to Google Cloud Storage
+
+permissions:
+  id-token: write
+  contents: read
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  sync-to-gcs:
+    environment: production
+    runs-on: ubuntu-latest
+    permissions:
+      contents: 'read'
+      id-token: 'write'
+
+    steps:
+      # Checkout the repository
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # Authenticate to Google Cloud
+      - id: auth
+        name: Authenticate to Google Cloud
+        uses: google-github-actions/auth@v2
+        with:
+          workload_identity_provider: ${{ secrets.GCP_WORKLOAD_IDENTITY_PROVIDER }}
+
+      # Set up Google Cloud SDK
+      - name: Set up Cloud SDK
+        uses: google-github-actions/setup-gcloud@v2
+        with:
+          project_id: ${{ secrets.GCP_PROJECT_ID }}
+
+      # Sync blockchains folder
+      - name: Sync blockchains folder
+        run: gsutil -m rsync -r -d -c blockchains gs://${{ secrets.GCP_BUCKET_NAME }}/blockchains
+
+      # Sync demex folder
+      - name: Sync demex folder
+        run: gsutil -m rsync -r -d -c demex gs://${{ secrets.GCP_BUCKET_NAME }}/demex
+
+      # Sync tokens folder
+      - name: Sync tokens folder
+        run: gsutil -m rsync -r -d -c tokens gs://${{ secrets.GCP_BUCKET_NAME }}/tokens
